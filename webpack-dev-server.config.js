@@ -9,11 +9,11 @@ const config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, '/src/app/app.js'),
+    path.join(__dirname, '/app/home/scripts/homeController.js'),
   ],
   // Server Configuration options
   devServer: {
-    contentBase: 'src/www', // Relative directory for base of server
+    contentBase: 'app/www', // Relative directory for base of server
     devtool: 'eval',
     hot: true, // Live-reload
     inline: true,
@@ -23,7 +23,7 @@ const config = {
   devtool: 'eval',
   output: {
     path: buildPath, // Path of output file
-    filename: 'app.js',
+    filename: 'homeController.js',
   },
   plugins: [
     // Enables Hot Modules Replacement
@@ -32,8 +32,8 @@ const config = {
     new webpack.NoErrorsPlugin(),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'www'},
-    ], path.resolve(__dirname, 'src')),
+      {from: 'app/www'},
+    ], path.resolve(__dirname, 'app')),
   ],
   module: {
     loaders: [
