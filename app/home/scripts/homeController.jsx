@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 class LikeButton extends React.Component {
   constructor() {
     super();
@@ -15,8 +18,10 @@ class LikeButton extends React.Component {
       <div onClick={this.handleClick}>
         You {text} this. Click to toggle.
       </div>
+
     );
   }
+
 }
 
 ReactDOM.render(

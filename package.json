@@ -3,6 +3,7 @@
   "name": "service-web-app",
   "description": "React Node.js sample app",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
